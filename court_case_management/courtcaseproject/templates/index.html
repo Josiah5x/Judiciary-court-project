@@ -1,0 +1,55 @@
+{% extends 'base.html' %}{%block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="/static/css/tablecss.css" rel="stylesheet">
+    </head>
+	
+	<div class="slider">
+		<div class="container">
+            <div class="item active">
+                <!-- <img src="/static/img_law/carousel-2.jpg" class="img-responsive" alt="">  -->
+           </div>
+           <div class="center">
+                        <div class="container-fluid" style=" border-radius: 8px; background-repeat: no-repeat; background-size: auto; opacity: 1;">
+                            <h1 style="text-transform: uppercase; color: #000; font-weight: 900; font-weight: bold; font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Judiciary Court Abuja</h1 style="color: #333;">
+                            <!-- <p style="font-size:larger ">The Judiciary is an institution accountable to society to administer justice and to organize itself to ensure the resolution of disputes in a way that is not only fair, just and in accordance with the law but also efficient, cost effective and with a high degree of professionalism and skill</p> -->
+                        <!-- Appointment Start -->
+
+                        <div style="display: flex; justify-content: center;">
+                            <!-- <h2>List Group With a Disabled Item</h2> -->
+                            <div class="list-group col-sm-4">
+                              <a href="#" class="list-group-item disabled" style="font-size: 18px;">Login</a>
+                              <div class="list-group-item">
+                              <form method="POST" action="/courtcaseproject/home">
+                                  {% csrf_token %}
+                                  <div class="controls">
+                                      <label>Username</label>
+                                      <input type="text" name="username" class="form-control input-lg" required="required" />
+                                  </div>
+                                  <div class="controls">
+                                      <label>Password</label>
+                                  <input type="password" name="password" class="form-control input-lg" required="required" />
+                              </div>
+                              
+                              <div>
+                                  <input type="submit" class="btn btn-primary btn-block border-0 py-3" value="submit">
+                                  <!-- <a href="admindashboard" class="btn btn-secondary btn-block border-0 py-3">SignUp With Us</a> -->
+                              </div>
+                              <br>
+                              <div>
+                                  <!-- <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button> -->
+                                  <a href="registration" class="btn btn-default">SignUp With Us</a>
+                                  
+                              </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                          
+	
+	
+   
+  </body>
+</html>
+{%endblock%}

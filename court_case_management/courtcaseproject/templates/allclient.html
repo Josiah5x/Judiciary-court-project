@@ -1,0 +1,70 @@
+{% extends 'base.html' %}{%block content %}
+<!DOCTYPE html>
+<html lang="en">   
+    <head>
+        <style>
+            #customers {
+              /* display: flex;
+              justify-content: center; */
+              font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td ,th {
+              border: 1px solid #ddd;
+              padding: 8px;
+              
+            }
+            
+            /* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+            
+            /* #customers tr:hover {background-color: #ddd;} */
+            
+            th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: lavender;
+              color: #333;
+            }
+            </style>
+    </head>
+
+  <body class="homepage">   
+	
+		
+	<section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Viewing all Clients</h2>
+
+               <table id="customers">
+                   <tr>
+                       <th>Company</th>
+                       <th>Contact</th>
+                       <th>Country</th>
+                       <th>Edit</th>
+                    </tr>
+                    {% for clients in allclient %}
+                <tr>
+                  <td>{{ clients.first_name}}</td>
+                  <td>{{clients.middle_name}}</td>
+                  <td>Germany</td>
+                  <td style="width: 150;">
+                    <a href="{% url 'update' clients.id %}" class="btn btn-primary" >Edit</a>
+                    <a href="{% url 'delete' clients.id %}" class="btn btn-warning">Delete</a>
+                  </td>
+                </tr>
+               {% endfor %}
+              </table>
+            </div></div></section>
+
+
+
+        
+
+
+  </body>
+</html>
+{%endblock%}

@@ -1,0 +1,155 @@
+{% extends 'base.html' %} {% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- Appointment Start -->
+    <style>
+        #customers {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          /* border: 1px solid #ddd; */
+          padding: 8px;
+        }
+        
+        /* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+        
+        /* #customers tr:hover {background-color: #ddd;} */
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4CAF50;
+          color: white;
+        }
+        </style>
+</head>
+<body>
+<!-- <div class="center"> -->
+    
+    <!-- <h2>Portfolio</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+ </div> -->
+    <!-- <div class="container-fluid" style="margin-top: 120px;">
+        <div class="container" style="display:flex; justify-content:center;">
+                        <div tyle="background: #eee;">
+                            <h1 class="text-center text-white mb-4">Registration</h1>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div class="date" id="date" data-target-input="nearest">
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" data-target="#date" data-toggle="datetimepicker"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div class="time" id="time" data-target-input="nearest">
+                                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select border-0 px-4" style="height: 47px;">
+                                        <option selected>Select A Service</option>
+                                        <option value="1">Service 1</option>
+                                        <option value="2">Service 1</option>
+                                        <option value="3">Service 1</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An Appointment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Appointment End -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <section id="contact-page">
+        <div class="container">
+                <h2 style="text-align: center;">REGISTER CLIENT</h2>
+            <div style="margin-left: 250px;"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <form method="POST" action="/courtcaseproject/register">
+                    {% csrf_token %}
+                      <div class="col-sm-7 col-sm-offset-1" style="background: ghostwhite; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
+                          <div class="controls">
+                              <label>First Name</label>
+                              <input type="text" name="firstname"  class="form-control input-lg" required="required">
+                          </div>
+                          <div class="controls">
+                              <label>Middle Name</label>
+                              <input type="text" name="middlename" class="form-control input-lg" required="required">
+                          </div>
+                          <div class="controls">
+                              <label>Last Name</label>
+                              <input type="text" name="lastname" class="form-control input-lg" required="required">
+                          </div>
+                          <div class="controls">
+                              <label>Date Of Birth</label>
+                              <input type="text" name="dateofbirth" class="form-control input-lg">
+                          </div>                        
+                          <!-- <div class="col-sm-5"> -->
+                              <div class="controls">
+                                  <label>Address</label>
+                                  <input type="text" name="address" class="form-control input-lg" required="required">
+                              </div>
+                              <div class="controls">
+                                  <label>File Id</label>
+                                  <input type="text" name="fileid" class="form-control input-lg" required="required">
+                              </div>
+                              <div class="controls">
+                                <label>Complaint</label>
+                                  <textarea name="complaint" id="complaint" required="required" class="form-control input-lg" rows="8"></textarea>
+                              </div>  
+                              <div class="controls">
+                                  <label>Gender</label>
+                                  <input type="text" name="gender" class="form-control input-lg" required="required">
+                              </div>
+                              <div class="controls">
+                                  <label>Date</label>
+                                  <input type="text" name="date" class="form-control input-lg" required="required">
+                              </div>
+                                    
+                              <div class="controls">
+                              <input type="submit" name="submit" class="btn btn-primary btn-lg" required="required" value="Submit Data">
+                              </div>
+                          </div>
+                      </div>
+                  </form> 
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
+    
+
+
+
+    
+    
+</body>
+</html>
+{% endblock %}
